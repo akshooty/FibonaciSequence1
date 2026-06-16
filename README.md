@@ -10,14 +10,17 @@ audited application.
 
 ## Live demo
 
-Once GitHub Pages is enabled for this repository, the demo is published in the
-cloud automatically by the workflow in `.github/workflows/deploy.yml` at:
+The demo is hosted on **GitHub Pages** at:
 
 ```
-https://<owner>.github.io/<repo>/
+https://akshooty.github.io/FibonaciSequence1/
 ```
 
-(For this repo: `https://akshooty.github.io/FibonaciSequence1/`.)
+It is published with the **Deploy from a branch** method (one-time setup):
+**Settings → Pages → Source: Deploy from a branch → Branch:
+`claude/fervent-hamilton-9e6s9n` / `(root)` → Save**. The repo is a plain
+static site (no build step); a `.nojekyll` file ensures the `js/` and `css/`
+folders are served as-is.
 
 You can also run it locally with zero dependencies — see **Run locally** below.
 
@@ -56,7 +59,7 @@ css/styles.css    # styling
 js/db.js          # IndexedDB wrapper (investors, investments, documents, audit)
 js/seed.js        # demo dataset generator (10 investors, 2 investments each, docs)
 js/app.js         # UI controller: views, forms, search, audit, routing
-.github/workflows/deploy.yml  # auto-deploy to GitHub Pages
+.nojekyll         # serve static folders as-is on GitHub Pages
 ```
 
 - **Persistence:** browser IndexedDB. Uploaded files are stored as base64 data
