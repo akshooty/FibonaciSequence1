@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>eCapital — Investor Database</title>
+  <meta name="description" content="Centralized investor profiles, investment records, and document storage for eCapital Investor Relations." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">eC</span>
+      <div>
+        <div class="brand-name">eCapital</div>
+        <div class="brand-sub">Investor Database</div>
+      </div>
+    </div>
+    <div class="global-search">
+      <input id="globalSearch" type="search" placeholder="Search investors, investments, documents…" autocomplete="off" />
+      <div id="searchResults" class="search-results" hidden></div>
+    </div>
+    <div class="topbar-actions">
+      <span class="env-pill">DEMO / POC</span>
+      <button id="resetBtn" class="btn btn-ghost" title="Reset all demo data">Reset data</button>
+    </div>
+  </header>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-view="dashboard">Dashboard</button>
+    <button class="tab" data-view="investors">Investors</button>
+    <button class="tab" data-view="documents">Documents</button>
+    <button class="tab" data-view="audit">Audit Trail</button>
+  </nav>
+
+  <main id="app" class="container"></main>
+
+  <!-- Modal host -->
+  <div id="modalRoot"></div>
+
+  <footer class="footer">
+    <span>eCapital Investor Database — Discovery Phase POC</span>
+    <span>Data stored locally in your browser (IndexedDB). No external transmission.</span>
+  </footer>
+
+  <script src="js/db.js"></script>
+  <script src="js/seed.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
